@@ -1,8 +1,8 @@
 import './App.css'
-import Characters from './components/Characters'
+import Characters from './components/Characters';
 import 'bootstrap/dist/css/bootstrap.min.css' ;
 import Cards from './components/Cards';
-import NavbarComponent from './components/Navbar'
+import NavbarComponent from './components/Navbar';
 function App() {
 
 
