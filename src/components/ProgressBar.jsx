@@ -108,7 +108,7 @@ const ProgressBar = ({produced, toProduce}) => {
 
     return (
         <div style={{marginLeft: '1rem', display: 'flex'}}>
-        <svg width="474" height="44" viewBox="0 0 474 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="100%" height="44" viewBox="0 0 474 44" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_ddd_501_3630)">
         <path d="M13.102 7.24023H467L461.367 36.3423H7L13.102 7.24023Z" fill="#1E2328" />
       </g>

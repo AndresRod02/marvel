@@ -70,7 +70,7 @@ const NavbarComponent = () => {
     <Navbar bg="black" expand="lg" className='my-0 py-0' style={{borderBottom: '1px solid #2E2E2E'}}>
       <Container fluid className='mx-5'>
         <Navbar.Brand><img src="./marvel-logo.webp" style={{width: '200px'}}/></Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll"/>
+        <Navbar.Toggle aria-controls="navbarScroll" style={{backgroundColor: '#F0E6D2'}}/>
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"

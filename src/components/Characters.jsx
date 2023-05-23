@@ -30,7 +30,6 @@ useEffect(()=> {axios.get('https://gateway.marvel.com/v1/public/characters', {
 }, [])
   .then(response => {
     setCharacters(response.data.data?.results);
-    console.log(response.data.data?.results);
   })
   .catch(error => {
     console.error(error);
@@ -39,12 +38,11 @@ useEffect(()=> {axios.get('https://gateway.marvel.com/v1/public/characters', {
 
 const previous = ()=>{
     if(currentPage > 0){
-        console.log("click")
         setCurrentPage(currentPage-1)
     }
 }
     return (
-        <div style={{display: 'grid', margin: '0rem 3.5rem', gridTemplateColumns: 'repeat(auto-fit, minmax(14rem, 1fr))', gridAutoFlow: 'dense', gap: '1.8rem', justifyContent: 'center', alignItems: 'center'}}>
+        <div style={{display: 'grid', margin: '0rem 3.5rem', gridTemplateColumns: 'repeat(auto-fit, minmax(14rem, 1fr))', gridAutoFlow: 'dense', gap: '1.8rem'}}>
             {charactersInPage.map((character)=>(
             <Card key={character.id} className='m-0' style={{width: 'minmax(10rem, 14rem)', height: '100%',background: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,12,20,1) 0.01%, rgba(23,26,32,1) 31.77%, rgba(39,44,52,1) 100%)', border: '0.75px solid rgba(60, 60, 65, 1)'}}>
                <Card.Body style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
@@ -75,12 +73,15 @@ const previous = ()=>{
                 </Card>
                 </Card.Body>
             </Card>))}
-            <div style={{display: 'flex', marginLeft: '235%', marginBottom: '3rem', position: 'relative'} }>
+            <div/>
+            <div/>
+            <div style={{display: 'flex', marginBottom: '3rem', marginLeft: '10%', position: 'relative', width: '100%'}}>
             <img src="./pagination.svg" style={{cursor: 'pointer', position: 'absolute', width: 'auto'}} onClick={()=> previous()}/>
             <img src="./pagination.svg" style={{transform: 'scale(-1, 1)', cursor: 'pointer', position: 'absolute', width: 'auto', marginLeft: '8rem'}} onClick={()=> currentPage === 3 ? currentPage : setCurrentPage(currentPage+1)}/>
             <h5 style={{letterSpacing: '5px', marginLeft: '4rem', marginTop: '0.5rem', position: 'absolute'}}>{currentPage + 1}/4</h5>
             </div>
         </div>
+        
     );
 };
 

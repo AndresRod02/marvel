@@ -6,15 +6,15 @@ const Cards = () => {
     const toProduce = 100
     return (
     <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%'}}>
-        <Card style={{ width: '38vw', backgroundColor: '#111111', margin: '2rem 1rem 1rem 3.5rem', position: 'relative' , border: '#42331A 1px solid', flexGrow: 2, height: '23.5vh'}}>
+        <Card style={{ width: '38vw', backgroundColor: '#111111', margin: '2rem 1rem 1rem 3.5rem', position: 'relative' , border: '#42331A 1px solid', height: '23.5vh'}}>
         <Card.Body className='text-center' style={{position: 'relative'}}>
-            <Card.Title style={{color: '#F0E6D2'}}>PROGRESO DE PELÍCULAS PRODUCIDAS</Card.Title>
-            <Card.Text className="mb-0" style={{textAlign: 'right', fontSize: '10px', color: '#C89B3C'}}>{toProduce} PELÍCULAS</Card.Text>
-            <Card.Text className="mb-0" style={{textAlign: 'right', fontSize: '10px', color: '#C89B3C'}}>META DE PRODUCCIÓN</Card.Text>
+            <Card.Title style={{color: '#F0E6D2', fontSize: '1.2vw'}}>PROGRESO DE PELÍCULAS PRODUCIDAS</Card.Title>
+            <Card.Text className="mb-0" style={{textAlign: 'right', fontSize: '0.8vw', color: '#C89B3C'}}>{toProduce} PELÍCULAS</Card.Text>
+            <Card.Text className="mb-0" style={{textAlign: 'right', fontSize: '0.8vw', color: '#C89B3C'}}>META DE PRODUCCIÓN</Card.Text>
             <ProgressBar 
             produced={produced}
             toProduce={toProduce}/>
-            <Card.Text className="mb-0" style={{textAlign: 'right', fontSize: '10px', color: '#1DA5B4'}}>{produced} PELÍCULAS PRODUCIDAS</Card.Text>
+            <Card.Text className="mb-0" style={{textAlign: 'right', fontSize: '0.8vw', color: '#1DA5B4'}}>{produced} PELÍCULAS PRODUCIDAS</Card.Text>
         </Card.Body>
         </Card>
         <Card style={{ width: '30vw', height:'23.5vh', backgroundColor: '#111111', margin: '2rem 0rem 1rem 0rem', border: '#42331A 1px solid', flexGrow: 1}}>
