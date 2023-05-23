@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Beaufort for LOL';
-    src: url('./BeaufortforLOL-Medium.ttf');
+    src: url('/public/BeaufortforLOL-Medium.ttf');
 }
 body {
     font-family: 'Beaufort for LOL', sans-serif;
@@ -15,7 +15,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('./background2.webp');
+    background-image: url('/public/background2.webp');
     filter: brightness(0.2) contrast(1.3) saturate(120%) hue-rotate(180deg);
     z-index: -1;
   }
