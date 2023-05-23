@@ -94,7 +94,7 @@ const NavbarComponent = () => {
           <img src="./notification.svg" style={{position: 'relative', right: '3rem', cursor:'pointer', filter: isHoverBell ? '' : 'grayscale(80%) brightness(160%)'}} 
           onMouseEnter={()=>setIsHoverBell(true)}
           onMouseLeave={()=>setIsHoverBell(false)}/>
-          <div style={{position: 'relative', bottom: '0.7rem', cursor:'pointer', filter: isHoverSettings ? 'brightness(55%) saturate(700%)' : ''}}
+          <div style={{position: 'relative', bottom: '0.7rem', cursor:'pointer', filter: isHoverSettings ? 'brightness(55%) saturate(850%)' : ''}}
           onMouseEnter={()=>setIsHoverSettings(true)}
           onMouseLeave={()=>setIsHoverSettings(false)}>
           <img src="./settings.svg" alt="" style={{position: 'absolute'}}/>
