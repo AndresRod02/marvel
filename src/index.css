@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Beaufort for LOL';
+    src: url('./BeaufortforLOL-Medium.ttf');
+}
+body {
+    font-family: 'Beaufort for LOL', sans-serif;
+    color: #C89B3C;
+    position: relative;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./background2.png');
+    filter: brightness(0.2) contrast(1.3) saturate(120%) hue-rotate(180deg);
+    z-index: -1;
+  }
+  
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    box-shadow: 0 0 100px rgb(89, 137, 186);
+  }
+  
+
+@keyframes toSpin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
