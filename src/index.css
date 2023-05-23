@@ -2,12 +2,17 @@
     font-family: 'Beaufort for LOL';
     src: url('/public/BeaufortforLOL-Medium.ttf');
 }
+
 body {
     font-family: 'Beaufort for LOL', sans-serif;
     color: #C89B3C;
     position: relative;
   }
-  
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+
   body::before {
     content: "";
     position: absolute;
