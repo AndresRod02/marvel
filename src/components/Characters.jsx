@@ -66,8 +66,7 @@ const previous = ()=>{
                             confirmButtonColor: '#C89B3C',
                             background: '#3C3C41',
                             color: '#F0E6D2',
-                            width: '300px',
-                            border: '0.75px solid rgba(60, 60, 65, 1)'
+                            width: '300px'
                           })
                     }}>
                         <div style={{animation: isCharacterHover === character.id ? 'toSpin 10s linear infinite' : ''}}>

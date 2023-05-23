@@ -9,6 +9,7 @@ const NavbarComponent = () => {
     const [isActiveHome, setIsActiveHome] = useState(false)
     const [isActiveCharacters, setIsActiveCharacters] = useState(true)
     const [isHoverBell, setIsHoverBell] = useState(false)
+    const [isHoverSettings, setIsHoverSettings ] = useState(false)
 
     const homeStyles = isActiveHome ? {
         background: "linear-gradient(to top, #231F20 0%, rgba(34, 34, 34, 0) 100%)",
@@ -93,7 +94,9 @@ const NavbarComponent = () => {
           <img src="./notification.svg" style={{position: 'relative', right: '3rem', cursor:'pointer', filter: isHoverBell ? '' : 'grayscale(80%) brightness(160%)'}} 
           onMouseEnter={()=>setIsHoverBell(true)}
           onMouseLeave={()=>setIsHoverBell(false)}/>
-          <div style={{position: 'relative', bottom: '0.7rem', cursor:'pointer'}}>
+          <div style={{position: 'relative', bottom: '0.7rem', cursor:'pointer', filter: isHoverSettings ? 'brightness(60%) saturate(700%)' : ''}}
+          onMouseEnter={()=>setIsHoverSettings(true)}
+          onMouseLeave={()=>setIsHoverSettings(false)}>
           <img src="./settings.svg" alt="" style={{position: 'absolute'}}/>
           <img src="./elipse.svg" alt="" style={{position: 'absolute', left: '0.3rem', top:'0.3rem'}}/>
           </div>
