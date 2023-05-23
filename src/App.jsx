@@ -1,4 +1,3 @@
-import './App.css'
 import Characters from './components/Characters';
 import 'bootstrap/dist/css/bootstrap.min.css' ;
 import Cards from './components/Cards';

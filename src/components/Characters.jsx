@@ -3,6 +3,7 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import { useState, useEffect } from 'react';
 import { MD5 } from 'crypto-js';
+import Swal from 'sweetalert2';
 const Characters = () => {
 const [isCharacterHover, setIsCharacterHover ] = useState(null)
 const [characters, setCharacters] = useState([])
@@ -27,7 +28,7 @@ useEffect(()=> {axios.get('https://gateway.marvel.com/v1/public/characters', {
     ts: timestamp,
     hash: hash
   }
-}, [])
+    })
   .then(response => {
     setCharacters(response.data.data?.results);
   })
@@ -51,9 +52,24 @@ const previous = ()=>{
                     <img src='./markName.svg' style={{position: 'absolute', top: '10%', right: '100%'}}></img>
                     <img src='./markName.svg' style={{position: 'absolute', top: '10%', left: '100%', transform: 'scale(-1, 1)'}}></img>
                 </div>
-                    <div style={{position: 'relative'}} 
+                    <div style={{position: 'relative', cursor: 'pointer'}} 
                     onMouseEnter={()=>setIsCharacterHover(character.id)}
-                    onMouseLeave={()=>setIsCharacterHover(null)}>
+                    onMouseLeave={()=>setIsCharacterHover(null)}
+                    onClick={() =>{
+                        Swal.fire({
+                            title: character.name,
+                            text: `Última aparición en una serie: ${character.series?.items[0].name}`,
+                            imageUrl: character.thumbnail.path+"."+character.thumbnail.extension,
+                            imageWidth: 200,
+                            imageHeight: 200,
+                            imageAlt: 'Custom image',
+                            confirmButtonColor: '#C89B3C',
+                            background: '#3C3C41',
+                            color: '#F0E6D2',
+                            width: '300px',
+                            border: '0.75px solid rgba(60, 60, 65, 1)'
+                          })
+                    }}>
                         <div style={{animation: isCharacterHover === character.id ? 'toSpin 10s linear infinite' : ''}}>
                             <img src="./diamond.svg"  style={{width: '15px', position: 'absolute', left: '45%', top: '-10%'}}/> 
                             <img src="./diamond.svg"  style={{width: '15px', position: 'absolute', bottom: '-10%', left: '45%'}}/> 
